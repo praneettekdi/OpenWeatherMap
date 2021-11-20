@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>Open Weather Map</name>
+	<author>Praneet Shrivastava</author>
+	<creationDate>November 2021</creationDate>
+	<copyright>Open Weather Map</copyright>
+	<authorEmail>praneet1.shrivastava@gmail.com</authorEmail>
+	<authorUrl>https://www.praneet.xyz/</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0.0</version>
+	<description>A module for displaying weather information.</description>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/mysql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<files>
+		<filename module="mod_fl_weather">mod_fl_weather.php</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+		<folder>sql</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+				name="apikey"
+				type="text"
+				label="Api Key"
+				description="Open Weather Map API key."
+				required="true"
+				/>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
