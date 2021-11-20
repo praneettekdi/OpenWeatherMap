@@ -18,8 +18,7 @@ defined('_JEXEC') or die('Restricted Access');
  */
 class ModFlWeatherHelper
 {
-    public static $weatherAPI       = "https://api.openweathermap.org/data/2.5/";
-    public static $cacheLifeSeconds = 3600;
+    public static $weatherAPI = "https://api.openweathermap.org/data/2.5/";
 
     /**
      * Retrieve list of cities
